@@ -1,0 +1,337 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+html{
+    height: 100%;
+}
+body{
+    background-color: #fef847;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.container{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+}
+
+.box_list li{
+    margin: 5rem 0rem;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr 1fr 1fr;
+    grid-column-gap:3rem; 
+}
+.box_list li span{
+    display: flex;
+    align-items: flex-end;
+    font-size: 25px;
+}
+.box{
+    width: 100px;
+    height: 100px;
+}
+.p1_b1{
+    background-color: #508890;
+    animation-name:animation_b1;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+.p1_b2{
+    background-color: #9f9f9f;
+    animation-name:animation_b2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+.p1_b3{
+    background-color: #508890;
+    animation-name:animation_b3;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+.p1_b4{
+   
+    border: 1px solid black;
+}
+#b4_1{
+    background-color: #508890;
+    animation-name:animation_b4_1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+#b4_2{
+    background-color: #9a4735;
+    animation-name:animation_b4_2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+#b4_3{
+    background-color: #61a94d;
+    animation-name:animation_b4_3;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+#bod{
+    background: url(./assets/Images/sky.jpg);
+    width: 100%;
+    height: 90vh;
+    justify-content: center;
+}
+#bod h1{
+    text-align:center;
+    margin-top: 20px;
+}
+#bod span{
+    padding: 1rem;
+    color: black;
+    
+
+    
+}
+#sun img{
+    width: 10rem;
+    height: 10rem;
+    float: right;
+    margin-right: 5%;
+    animation-name: sun_animation;
+    animation-duration: 80s;
+    animation-iteration-count: infinite;
+}
+#fly_man{
+    position: relative;
+    top: 100px;
+}
+
+
+#part_mid{
+    position: relative;
+    top: 250px;
+}
+#car{
+    display: flex;
+    justify-content: center;
+}
+#car img[alt="car"]{
+    z-index: 1;
+    position: absolute;
+    width: 21%;
+    height: 40%;
+}
+#smoke{
+    position: absolute;
+    left: 27%;
+    top: 73%;
+    z-index: 1;
+}
+#smoke img{
+    transform: rotate(-90deg);
+    height: 200px;
+}
+#wheels{
+    position: absolute;
+    left: 41%;
+    top: 77%;
+    z-index: 1;
+}
+#wheels img[alt="wheel_A"]{
+    z-index: 1;
+    width: 13%;
+    margin-right:25% ;
+    animation-name: W_Animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+#wheels img[alt="wheel_B"]{
+    z-index: 1;
+    width: 13%;
+    animation-name: W_Animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+#city{
+    background: url(./assets/Images/city.png);
+    filter: brightness(0.1%);
+    height: 250px;
+    width: 200%;
+    opacity: 300%;
+    background-repeat: repeat;
+    animation: city_animation 10s linear infinite;
+}
+#road{
+    background: url(./assets/Images/road.jpg);
+    background-repeat: repeat-x;
+    height: 190px;
+    width: 400%;
+    animation: city_animation 1.5s linear infinite;
+}
+
+@keyframes animation_b1{
+    
+    0%{
+        transform: skewX(15deg);
+    }
+    25%{
+        transform: skewX(-15deg);
+    }
+    50%{
+        transform: skewX(15deg);
+    }
+    75%{
+        transform: skewX(-15deg);
+    }
+    100%{
+        transform: skewX(15deg);
+    }
+}
+@keyframes animation_b2{
+    
+    0%{
+        transform: skewY(15deg);
+    }
+    25%{
+        transform: skewY(-15deg);
+    }
+    50%{
+        transform: skewY(15deg);
+    }
+    75%{
+        transform: skewY(-15deg);
+    }
+    100%{
+        transform: skewY(15deg);
+    }
+}
+
+@keyframes animation_b3{
+    
+    25%{
+        transform: rotate(1turn);
+    }
+    100%{
+        transform: rotate(3turn);
+    }
+}
+@keyframes animation_b4_1{
+    0%{
+        transform: scaleY(1);
+    }
+    50%{
+        transform: scaleY(0.5);
+    }
+}
+@keyframes animation_b4_2{
+    0%{
+        transform: scaleX(1);
+    }
+    50%{
+        transform: scaleX(0.5);
+    }
+}
+@keyframes animation_b4_3{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(105deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(105deg);
+    }
+}
+.b1_2nd:hover{
+    width: 20rem;
+}
+#b2_2nd:hover{
+    width: 20rem;
+    height: 20rem;
+}
+#t_f1{
+    transition-timing-function:ease ;
+}
+#t_f2{
+    transition-timing-function:ease-in ;
+}
+#t_f3{
+    transition-timing-function:ease-in-out ;
+}
+#t_f4{
+    transition-timing-function:ease-out ;
+}
+#t_f5{
+    transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1) ;
+}
+#t_f6{
+    transition-timing-function:cubic-bezier(0.215, 0.610, 0.355, 1) ;
+}
+
+@keyframes city_animation{
+    100%{
+        transform: translate(-2000px);
+    }
+}
+@keyframes W_Animation{
+    100%{
+        transform: rotate(100turn);
+    }
+}
+@keyframes sun_animation{
+    100%{
+        transform: translateX(-1450px);
+    }
+}
+@keyframes man_animation{
+    100%{
+        transform: translateX(-1650px);
+    }
+}
+
+
+@media only screen and (max-width:1370px) and (min-width:667px) {
+    #part_mid{
+        position: relative;
+        top: 150px;
+    }
+    #wheels img[alt="wheel_A"]{
+        margin-right:20% ;
+    }
+}
+@media only screen and (max-width:666px) and (min-width:418px){
+    body{
+        padding-right:50px;
+    }
+    .box{
+        width: 80px;
+        height: 80px;
+    }
+}
+@media only screen and (max-width:419px) and (min-width:281px){
+    body{
+        padding-right:50px;
+    }
+    .box{
+        width: 50px;
+        height: 50px;
+    }
+}
+@media only screen and (max-width:280px) and (min-width:100px){
+    body{
+        padding-right:50px;
+    }
+    .box{
+        width: 35px;
+        height: 35px;
+    }
+    .container h1{
+        font-size: 23px;
+    }
+    .box_list li{
+        margin: 3rem 0px;
+    }
+}
